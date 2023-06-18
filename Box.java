@@ -14,9 +14,8 @@ public class Box {
         this.width = width;
         this.height = height;
         this.length = length;
+        
         System.out.println("width = " + width + "cm  " + "height = "  + height + "cm  " +  "length = " + length + "cm");
-
-
         System.out.println("Box volume is: " + length * width * height +  " milliliter = 1 liter");
     }
 
@@ -24,3 +23,13 @@ public class Box {
 
 }
 
+
+//экземпляр класса Box
+
+import Homework.Box;
+
+public class Box_size {
+    public static void main(String[] args) {
+        Box box1 = new Box(10, 10, 10);
+    }
+}
