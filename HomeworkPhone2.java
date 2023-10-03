@@ -33,9 +33,107 @@ public class HomeworkPhone2 {
     }
 }
 
+package com.telran.org.homeework_javapro;
 
+public class Phone2 {
+    private String phoneName;
+    private String ownNumber;
 
+    public Phone2(String phoneName, String ownNumber) {
+        this.phoneName = phoneName;
+        this.ownNumber = ownNumber;
+    }
 
+    public String getPhoneName() {
+        return phoneName;
+    }
+
+    public String getOwnNumber() {
+        return ownNumber;
+    }
+
+    public void setOwnNumber(String ownNumber) {
+        this.ownNumber = ownNumber;
+    }
+
+    public void call(String phoneNumber) {
+        System.out.println(" try to make a call to number " + phoneNumber);
+    }
+
+    public void receiveCall(String callerNumber) {
+        System.out.println(" try to receive a call from number " + callerNumber);
+    }
+    public static void makeCall(Phone2 phone2, String phoneNumber) {
+        phone2.call(phoneNumber);
+    }
+
+    public static void receiveCall(Phone2 phone2, String callerNumber) {
+        phone2.receiveCall(callerNumber);
+    }
+}
+
+package com.telran.org.homeework_javapro;
+
+public class ButtonPhone extends Phone2 {
+
+        public ButtonPhone(String ownNumber) {
+            super("ButtonPhone", ownNumber);
+        }
+
+        @Override
+        public void call(String phoneNumber) {
+            System.out.println("The phone " + getPhoneName() + " " + getOwnNumber() + " try to make a call to number " + phoneNumber);
+            super.call(phoneNumber);
+        }
+
+        @Override
+        public void receiveCall(String callerNumber) {
+            System.out.println("The phone " + getPhoneName() + " " + getOwnNumber() + " try to receive a call from number " + callerNumber);
+            super.receiveCall(callerNumber);
+        }
+}
+
+package com.telran.org.homeework_javapro;
+
+public class SmartPhone extends Phone2{
+
+    public SmartPhone(String ownNumber) {
+        super("SmartPhone", ownNumber);
+    }
+
+    @Override
+    public void call(String phoneNumber) {
+        System.out.println("The phone " + getPhoneName() + " " + getOwnNumber() + " try to make a call to number " + phoneNumber);
+        super.call(phoneNumber);
+    }
+
+    @Override
+    public void receiveCall(String callerNumber) {
+        System.out.println("The phone " + getPhoneName() + " " + getOwnNumber() + " try to receive a call from number " + callerNumber);
+        super.receiveCall(callerNumber);
+    }
+}
+
+package com.telran.org.homeework_javapro;
+
+public class RadioPhone extends Phone2 {
+
+    public RadioPhone(String ownNumber) {
+        super("RadioPhone", ownNumber);
+    }
+
+    @Override
+    public void call(String phoneNumber) {
+        System.out.println("The phone " + getPhoneName() + " " + getOwnNumber() + " try to make a call to number " + phoneNumber);
+        super.call(phoneNumber);
+    }
+
+    @Override
+    public void receiveCall(String callerNumber) {
+        System.out.println("The phone " + getPhoneName() + " " + getOwnNumber() + " try to receive a call from number " + callerNumber);
+        super.receiveCall(callerNumber);
+    }
+}
 
 
 
